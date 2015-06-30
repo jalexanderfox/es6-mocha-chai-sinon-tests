@@ -25,6 +25,14 @@ To run the tests and watch for changes in the 'test' directory:
 mocha -w test/**/**.js --harmony --recursive --reporter list
 ```
 
+OR
+
+This does the same as above:
+```bash
+npm test
+```
+
+
 To run node REPL with full ES6 features:
 ```bash
 node --harmony
