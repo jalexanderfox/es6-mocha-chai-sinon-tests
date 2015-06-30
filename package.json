@@ -1,0 +1,12 @@
+{
+  "name": "javascript-tests",
+  "version": "0.0.1",
+  "devDependencies": {
+  	"mocha": "*",
+    "chai": "^3.0.0",
+    "sinon": "^1.15.4"
+  },
+  "scripts": {
+    "test": "mocha -w --harmony --recursive --reporter list"
+  }
+}
