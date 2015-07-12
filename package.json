@@ -10,6 +10,7 @@
     "test": "mocha -w --harmony --recursive --reporter list"
   },
   "dependencies": {
-    "benchmark": "^1.0.0"
+    "benchmark": "^1.0.0",
+    "jslitmus": "^0.1.0"
   }
 }
