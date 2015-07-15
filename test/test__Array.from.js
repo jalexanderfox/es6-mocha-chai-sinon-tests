@@ -1,7 +1,7 @@
 // Javascript Array methods tests including ES6
 expect = require('chai').expect;
 
-// Pollyfill
+// Polyfill
 require('../polyfills/Array.from');
 
 //The Array.from() method creates a new Array instance from an array-like or iterable object.
