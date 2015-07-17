@@ -5,7 +5,7 @@ expect = require('chai').expect;
 
 
 // Polyfill
-require('../polyfills/Array.prototype.copyWithin');
+require('../polyfills/polyfills').getPolyfill('Array.prototype.copyWithin');
 
 //The every() method tests whether all elements in the array pass the test implemented by the provided function.
 describe('Array', function() {

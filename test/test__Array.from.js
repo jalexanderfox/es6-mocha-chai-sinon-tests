@@ -2,7 +2,7 @@
 expect = require('chai').expect;
 
 // Polyfill
-require('../polyfills/Array.from');
+require('../polyfills/polyfills').getPolyfill('Array.from');
 
 //The Array.from() method creates a new Array instance from an array-like or iterable object.
 describe('Array', function() {

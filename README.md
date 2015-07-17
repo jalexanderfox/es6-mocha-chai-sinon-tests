@@ -32,6 +32,11 @@ This does the same as above:
 npm test
 ```
 
+####NOTE:
+by default, the tests are run with polyfills if available, to turn off polyfills run your tests like this:
+```bash
+NOPOLYFILLS=true mocha -w test/**/**.js --harmony --recursive --reporter list
+```
 
 To run node REPL with full ES6 features:
 ```bash
