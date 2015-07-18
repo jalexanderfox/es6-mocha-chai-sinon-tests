@@ -12,6 +12,7 @@ var arrayConcat = function() {
 
 var pushApply = function() {
 	// http://davidwalsh.name/merge-arrays-javascript
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 	Array.prototype.push.apply(array1, array2);
 	return array1;
 }

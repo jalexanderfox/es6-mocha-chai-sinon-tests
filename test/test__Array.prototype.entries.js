@@ -1,5 +1,5 @@
 // Javascript Array methods tests including ES6
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 var arr = ['a', 'b', 'c'];
 var eArr = arr.entries();

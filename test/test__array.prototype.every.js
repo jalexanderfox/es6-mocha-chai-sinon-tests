@@ -1,5 +1,5 @@
 // Javascript Array methods tests including ES6
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 //The every() method tests whether all elements in the array pass the test implemented by the provided function.
 describe('Array', function() {

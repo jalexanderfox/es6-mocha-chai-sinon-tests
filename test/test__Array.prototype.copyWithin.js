@@ -1,7 +1,7 @@
 // Javascript Array methods tests including ES6
 // arr.copyWithin(target, start[, end = this.length])
 
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 
 // Polyfill

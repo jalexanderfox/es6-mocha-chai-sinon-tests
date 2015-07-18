@@ -1,5 +1,5 @@
 // Javascript Array methods tests including ES6
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 // Polyfill
 require('../polyfills/polyfills').getPolyfill('Array.of');

@@ -1,5 +1,5 @@
 // Javascript Array methods tests including ES6
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 //Arrow functions
 describe('arrow functions', function() {

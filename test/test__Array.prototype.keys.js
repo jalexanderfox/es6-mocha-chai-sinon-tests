@@ -1,5 +1,5 @@
 // Javascript Array methods tests including ES6
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 //The keys() method returns a new Array Iterator that contains the keys for each index in the array.
 describe('Array', function() {

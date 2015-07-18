@@ -1,5 +1,5 @@
 // Javascript Array methods tests including ES6
-expect = require('chai').expect;
+var expect = require('chai').expect;
 
 
 // A prime number (or a prime) is a natural number greater than 1 that has no
