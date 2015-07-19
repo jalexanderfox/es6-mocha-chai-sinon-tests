@@ -16,9 +16,6 @@ describe('Array', function() {
 				expect( array.indexOf(7) ).to.equal(-1);     // -1
 				expect( array.indexOf(2, -1) ).to.equal(-1); // -1
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

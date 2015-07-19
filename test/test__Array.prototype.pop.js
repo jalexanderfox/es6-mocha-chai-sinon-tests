@@ -11,9 +11,6 @@ describe('Array', function() {
 				expect( myFish ).to.eql( ['angel', 'clown', 'mandarin' ] );
 				expect( popped ).to.equal( 'sturgeon' );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

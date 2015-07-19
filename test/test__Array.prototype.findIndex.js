@@ -26,9 +26,6 @@ describe('Array', function() {
 			it('Otherwise -1 is returned.', function(){
 				expect( [4, 6, 8, 12].findIndex(isPrime) ).to.equal(-1); // -1, not found
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

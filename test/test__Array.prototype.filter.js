@@ -32,9 +32,6 @@ describe('Array', function() {
 				expect( arr ).to.not.equal( arrByID );
 				expect( arrByID ).to.eql( [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

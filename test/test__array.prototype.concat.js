@@ -9,8 +9,5 @@ describe('Array', function() {
 				expect(['test'].concat('new', 1, {hello:"world"})).to.eql(['test', 'new', 1, { hello: "world"}]);
 			});
 		});
-
-	})
-}
-
-);
+	});
+});

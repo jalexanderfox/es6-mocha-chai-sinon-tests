@@ -12,9 +12,6 @@ describe('Array', function() {
 				expect( a.join(' + ') ).to.equal('Wind + Rain + Fire');
 				expect( a.join('') ).to.equal('WindRainFire');
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

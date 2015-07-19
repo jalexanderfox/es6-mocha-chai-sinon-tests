@@ -16,9 +16,6 @@ describe('Array', function() {
 				expect( arr.unshift([-3]) ).to.equal( 6 );
 				expect( arr ).to.eql( [[-3], -2, -1, 0, 1, 2] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

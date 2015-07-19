@@ -20,8 +20,5 @@ describe('Array', function() {
 			expect(Array.isArray(false)).to.be.false;
 			expect(Array.isArray({ __proto__: Array.prototype })).to.be.false;
 		});
-
-	})
-}
-
-);
+	});
+});

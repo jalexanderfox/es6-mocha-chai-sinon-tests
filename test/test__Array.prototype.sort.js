@@ -94,10 +94,8 @@ describe('Array', function() {
 			});
 
 		});
+	});
+});
 
-	})
-}
-
-);
 
 

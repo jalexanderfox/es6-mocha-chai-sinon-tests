@@ -22,9 +22,6 @@ describe('Array', function() {
 
 				expect( vegetables ).to.eql( ['parsnip', 'potato', 'celery', 'beetroot'] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

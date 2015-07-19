@@ -15,9 +15,6 @@ describe('Array', function() {
 				expect( [1, 2, 3].includes(3, -1) ).to.be.true; // true
 				expect( [1, 2, NaN].includes(NaN) ).to.be.true; // true
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

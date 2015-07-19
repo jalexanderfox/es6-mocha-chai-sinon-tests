@@ -9,9 +9,6 @@ describe('Array', function() {
 				var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
 				expect( monthNames.toString() ).to.equal('Jan,Feb,Mar,Apr');
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

@@ -12,9 +12,6 @@ describe('Array', function() {
 				expect( shifted ).to.equal( 'angel' );
 				expect( myFish.length ).to.equal(3);
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

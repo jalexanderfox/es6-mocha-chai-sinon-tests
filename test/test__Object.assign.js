@@ -61,7 +61,5 @@ describe('Object', function() {
 		// 	expect( obj ).to.eql( { a: 1, [Symbol("foo")]: 2 } );
 		// });
 
-	})
-}
-
-);
+	});
+});

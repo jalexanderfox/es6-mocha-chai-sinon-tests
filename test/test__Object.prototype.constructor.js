@@ -17,9 +17,6 @@ describe('Object', function() {
 				var n = new Number(3);
 				expect( n.constructor ).to.equal( Number );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

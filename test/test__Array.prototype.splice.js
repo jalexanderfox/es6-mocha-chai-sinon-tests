@@ -32,9 +32,6 @@ describe('Array', function() {
 				expect(myFish).to.eql( ['parrot', 'anemone', 'blue'] );
 				expect(removed).to.eql( ['trumpet', 'surgeon'] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

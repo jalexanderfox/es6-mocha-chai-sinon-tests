@@ -19,9 +19,6 @@ describe('Array', function() {
 				});
 				expect( flattened ).to.eql( [4, 5, 2, 3, 0, 1] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

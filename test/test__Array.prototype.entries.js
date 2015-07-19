@@ -13,9 +13,6 @@ describe('Array', function() {
 				expect( eArr.next().value ).to.eql([1, 'b']); // [1, 'b']
 				expect( eArr.next().value ).to.eql([2, 'c']); // [2, 'c']
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

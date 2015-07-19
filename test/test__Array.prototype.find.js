@@ -26,9 +26,6 @@ describe('Array', function() {
 			it('Otherwise undefined is returned.', function(){
 				expect( [4, 6, 8, 12].find(isPrime) ).to.equal(undefined); // undefined, not found
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

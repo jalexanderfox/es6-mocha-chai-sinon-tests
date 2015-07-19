@@ -34,8 +34,5 @@ describe('Object', function() {
 			expect( rect.move(1, 1) ).to.equal('Shape moved.'); // Outputs, 'Shape moved.'
 
 		});
-
-	})
-}
-
-);
+	});
+});

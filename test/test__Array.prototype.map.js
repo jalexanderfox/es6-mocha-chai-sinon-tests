@@ -72,12 +72,10 @@ describe('Array', function() {
 				expect( ['1', '2', '3'].map(Number) ).to.eql( [1, 2, 3] );
 
 			});
-		})
+		});
+	});
+});
 
-	})
-}
-
-);
 
 
 // Example: using map generically querySelectorAll

@@ -21,9 +21,6 @@ describe('Array', function() {
 				var array = [2, 5, 9, 2];
 				expect( array.lastIndexOf(7) ).to.equal(-1);     // -1
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

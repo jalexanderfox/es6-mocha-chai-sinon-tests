@@ -17,8 +17,5 @@ describe('Array', function() {
 				expect([12, 54, 18, 130, 44].every(elem => elem >= 10)).to.be.true; // true
 			});
 		});
-
-	})
-}
-
-);
+	});
+});

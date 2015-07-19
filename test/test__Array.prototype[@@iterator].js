@@ -21,9 +21,6 @@ describe('Array', function() {
 				expect( eArr.next().value ).to.equal( 'o' );
 				expect( eArr.next().value ).to.equal( 'p' );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

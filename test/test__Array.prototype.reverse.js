@@ -11,9 +11,6 @@ describe('Array', function() {
 
 				expect( myArray ).to.eql( ['three', 'two', 'one'] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

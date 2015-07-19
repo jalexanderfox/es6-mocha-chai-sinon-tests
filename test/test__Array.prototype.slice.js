@@ -35,9 +35,6 @@ describe('Array', function() {
 				var list2 = list(1, 2, 3); // [1, 2, 3]
 				expect( list2 ).to.eql( [1, 2, 3] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

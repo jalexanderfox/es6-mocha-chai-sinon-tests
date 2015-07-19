@@ -12,7 +12,5 @@ describe('Array', function() {
 			expect(Array.of(1, 2, 3)).to.eql([1,2,3]);   // [1, 2, 3]
 			expect(Array.of(undefined)).to.eql([undefined]); // [undefined]
 		});
-	})
-}
-
-);
+	});
+});

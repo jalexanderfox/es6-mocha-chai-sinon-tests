@@ -22,9 +22,6 @@ describe('Array', function() {
 				expect( sparseKeys ).to.eql( ['0', '2'] );
 				//expect( denseKeys ).to.eql( [0, 1, 2] );
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

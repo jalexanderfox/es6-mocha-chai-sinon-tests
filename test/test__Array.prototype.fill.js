@@ -14,9 +14,6 @@ describe('Array', function() {
 				expect( [1, 2, 3].fill(4, NaN, NaN) ).to.eql([1, 2, 3]);     // [1, 2, 3]
 				expect( [].fill.call({ length: 3 }, 4) ).to.eql({0: 4, 1: 4, 2: 4, length: 3});  // {0: 4, 1: 4, 2: 4, length: 3}
 			});
-		})
-
-	})
-}
-
-);
+		});
+	});
+});

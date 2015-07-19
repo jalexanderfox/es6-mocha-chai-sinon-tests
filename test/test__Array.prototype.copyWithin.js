@@ -39,8 +39,5 @@ describe('Array', function() {
 				// Int32Array [4, 2, 3, 4, 5]
 			});
 		});
-
-	})
-}
-
-);
+	});
+});
