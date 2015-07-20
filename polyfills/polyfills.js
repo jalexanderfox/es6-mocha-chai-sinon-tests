@@ -25,3 +25,17 @@ var getPolyfillFrom = function(dirname) {
 };
 
 exports.getPolyfill = getPolyfillFrom(__dirname);
+
+
+// partial function/curry with bind
+var getPolyfill = function(dirname, name) {
+	if(process.env.NOPOLYFILLS && process.env.NOPOLYFILLS === 'true'){
+		console.log('polyfills are turned off.');
+		return this;
+	} else {
+		return require( dirname + '/' + name);
+	}
+};
+
+exports.getPolyfill = getPolyfill.bind(undefined, __dirname);
+
