@@ -43,3 +43,7 @@ To run node REPL with full ES6 features:
 node --harmony
 ```
 
+##TO DO
+* add shim support
+* setup for browser (Karma)
+
