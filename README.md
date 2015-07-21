@@ -43,6 +43,37 @@ To run node REPL with full ES6 features:
 node --harmony
 ```
 
+###Run Object specific tests
+There are a few ways to run object specific tests.
+
+The package.json has tests configured for several bultin objects which includes their subsequent methods/properties.
+```json
+  "scripts": {
+    "test": "mocha -w --harmony --recursive --reporter list",
+    "test__Array" : "mocha -w test/test__Array**.js --harmony --recursive --reporter list",
+    "test__Function" : "mocha -w test/test__Function**.js --harmony --recursive --reporter list",
+    "test__Math" : "mocha -w test/test__Math**.js --harmony --recursive --reporter list",
+    "test__Object" : "mocha -w test/test__Object**.js --harmony --recursive --reporter list",
+    "test__Promise" : "mocha -w test/test__Promise**.js --harmony --recursive --reporter list",
+    "test__String" : "mocha -w test/test__String**.js --harmony --recursive --reporter list"
+  },
+```
+
+These scripts can be run in the project root with the following command pattern example for Array:
+```bash
+npm run-script test__Array
+```
+
+OR, of course you can just run the mocha script itself:
+```bash
+mocha -w test/test__Array**.js --harmony --recursive --reporter list
+```
+
+###Run file specific tests
+```bash
+mocha -w test/test__Array.js --harmony --recursive --reporter list
+```
+
 ##TO DO
 * add shim support
 * setup for browser (Karma)
