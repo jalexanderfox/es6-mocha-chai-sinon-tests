@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 describe('String', function() {
 	it('object is a constructor for strings, or a sequence of characters.', function(){
 		expect( String(1) ).to.equal( '1' );
-		expect( new String(1) ).to.eql( { '0':'1'} );
+		expect( new String(1) ).to.have.property( '0', '1' );
 	});
 
 	it('has character access methods and array like access to characters', function(){
@@ -40,7 +40,12 @@ describe('String', function() {
 		var s2 = new String('2 + 2'); // creates a String object
 		expect( eval(s1) ).to.equal(4);        // returns the number 4
 		// expect( eval(s2) ).to.equal("2 + 2");        // returns the string "2 + 2"
-		expect( eval(s2) ).to.eql({ '0': '2', '1': ' ', '2': '+', '3': ' ', '4': '2' });        // returns the string "2 + 2"
+		s2eval = eval(s2);
+		expect( s2eval ).to.have.property( '0', '2' );
+		expect( s2eval ).to.have.property( '1', ' ' );
+		expect( s2eval ).to.have.property( '2', '+' );
+		expect( s2eval ).to.have.property( '3', ' ' );
+		expect( s2eval ).to.have.property( '4', '2' );
 	});
 
 	// need to add shim support for this to work in node (non-standards implementation)
