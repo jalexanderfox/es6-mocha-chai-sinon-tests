@@ -2,18 +2,25 @@ var expect = require('chai').expect;
 
 //str.charAt(index)
 //The charAt() method returns the specified character from a string.
+//
+// Characters in a string are indexed from left to right.
+// The index of the first character is 0, and the index of
+// the last character in a string called stringName is stringName.length - 1.
+// If the index you supply is out of range, JavaScript returns an empty string.
 describe('String', function() {
 	describe('#prototype', function(){
 		describe('#charAt', function(){
-			it('returns the specified character from a string.', function(){
+			it('returns the character at the specified index of the string.', function(){
 				var anyString = 'Brave new world';
+				expect( '0123456789'.charAt(0)   ).to.equal( "0" );
+				expect( '0123456789'.charAt(1)   ).to.equal( "1" );
+				expect( '0123456789'.charAt(2)   ).to.equal( "2" );
+				expect( '0123456789'.charAt(3)   ).to.equal( "3" );
+				expect( '0123456789'.charAt(4)   ).to.equal( "4" );
+			});
 
-				expect( anyString.charAt(0)   ).to.equal( "B" );
-				expect( anyString.charAt(1)   ).to.equal( "r" );
-				expect( anyString.charAt(2)   ).to.equal( "a" );
-				expect( anyString.charAt(3)   ).to.equal( "v" );
-				expect( anyString.charAt(4)   ).to.equal( "e" );
-				expect( anyString.charAt(999) ).to.equal( "" );
+			it('returns an empty string if the index supplied is out of range', function(){
+				expect( 'Brave new world'.charAt(999) ).to.equal( "" );
 			});
 
 			describe('use: get whole character', function(){

@@ -17,7 +17,7 @@ describe('String', function() {
 				expect( 'Blue Whale'.indexOf('blue') ).to.equal( -1 );
 			});
 
-			it('Returns -1 if the value is not found.', function(){
+			it('returns -1 if the value is not found.', function(){
 				expect( 'Blue Whale'.indexOf('Blute' ) ).to.equal( -1 );
 			});
 

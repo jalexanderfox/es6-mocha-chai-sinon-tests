@@ -2,6 +2,15 @@ var expect = require('chai').expect;
 
 //str.charCodeAt(index)
 //The charCodeAt() method returns the numeric Unicode value of the character at the given index (except for unicode codepoints > 0x10000).
+
+//Note that charCodeAt() will always return a value that is less than 65536.
+//This is because the higher code points are represented by a pair of (lower valued)
+//"surrogate" pseudo-characters which are used to comprise the real character.
+//Because of this, in order to examine or reproduce the full character for individual
+//characters of value 65536 and above, for such characters, it is necessary to retrieve
+//not only charCodeAt(i), but also charCodeAt(i+1) (as if examining/reproducing a string
+//with two letters). See example 2 and 3 below.
+
 describe('String', function() {
 	describe('#prototype', function(){
 		describe('#charCodeAt', function(){
@@ -27,18 +36,20 @@ describe('String', function() {
 
 			});
 
-			it('(except for unicode codepoints > 0x10000)', function(){
+			it('except for unicode codepoints > 0x10000', function(){
 				expect( String.fromCodePoint('0x10010').charCodeAt(0) ).to.equal(55296);
 				expect( String.fromCodePoint('0x10010').charCodeAt(1) ).to.equal(56336);
-
-				expect( fixedCharCodeAt('0x10010', 0) ).to.equal( 48 );
-				expect( fixedCharCodeAt('0x10010', 1) ).to.equal( 120 ); // false
 
 				expect( '\uD800\uDC00'.charCodeAt(0) ).to.equal(55296);
 				expect( '\uD800\uDC00'.charCodeAt(1) ).to.equal(56320);
 
 				expect( fixedCharCodeAt('\uD800\uDC00', 0) ).to.equal( 65536 );
 				expect( fixedCharCodeAt('\uD800\uDC00', 1) ).to.be.false; // false
+			});
+
+			it('will always return a value that is less than 65536', function(){
+				expect( '\uFFFF\uFFFF'.charCodeAt(0) ).to.equal( 65535 );
+				expect( fixedCharCodeAt('\uD800\uDC00', 0) ).to.equal( 65536 );
 			});
 
 

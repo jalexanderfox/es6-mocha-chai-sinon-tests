@@ -6,19 +6,15 @@ var expect = require('chai').expect;
 describe('String', function() {
 	describe('#prototype', function(){
 		describe('#search', function(){
-			it('search for a match between a regular expression and this String object.', function(){
-				expect( 'somestring'.search(/i/) ).to.equal(7);
-				expect( 'somestring'.search(/a/) ).to.equal(-1);
+			it('search for a match between a regular expression and this String object, returns the first match index.', function(){
+				expect( 'somestring'.search(/o/) ).to.equal(1);
+				expect( '0123456789'.search(/1/) ).to.equal(1);
+			});
 
-				function testinput(re, str) {
-				  var midstring;
-				  if (str.search(re) != -1) {
-				    midstring = ' contains ';
-				  } else {
-				    midstring = ' does not contain ';
-				  }
-				  console.log(str + midstring + re);
-				}
+			it('returns -1 if there are no matches', function(){
+				expect( 'somestring'.search(/a/) ).to.equal(-1);
+				expect( 'somestring'.search(/1/) ).to.equal(-1);
+				expect( '0123456789'.search(/a/) ).to.equal(-1);
 			});
 		});
 	});

@@ -18,8 +18,9 @@ describe('String', function() {
 				// 'abcabc' (repeat() is a generic method)
 			});
 
-			it('throws a RangeError if an invalid paramater is provided', function(){
+			it('throws a RangeError if an invalid paramater is provided, the parameter must be a postitive number less than infinity', function(){
 				expect( function() { 'abc'.repeat(-1) } ).to.throw( RangeError);
+				expect( function() { 'abc'.repeat(Number.POSITIVE_INFINITY) } ).to.throw( RangeError );
 				expect( function() { 'abc'.repeat(1/0) } ).to.throw( RangeError );
 			});
 		});

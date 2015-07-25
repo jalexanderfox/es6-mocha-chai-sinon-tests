@@ -8,8 +8,11 @@ describe('String', function() {
 			it('returns a non-negative integer that is the UTF-16 encoded code point value.', function(){
 				expect( 'ABC'.codePointAt(1) ).to.equal( 66 );
 				expect( '\uD800\uDC00'.codePointAt(0) ).to.equal( 65536 );
-				expect( 'XYZ'.codePointAt(42) ).to.be.undefined;
 			});
+
+			it('undefined is returned if there is no element at the specified position', function(){
+				expect( 'XYZ'.codePointAt(42) ).to.be.undefined;
+			})
 		});
 	});
 });
