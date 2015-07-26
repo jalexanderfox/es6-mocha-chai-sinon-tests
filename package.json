@@ -11,6 +11,7 @@
     "test__Array" : "mocha -w test/test__Array**.js --harmony --recursive --reporter list",
     "test__Function" : "mocha -w test/test__Function**.js --harmony --recursive --reporter list",
     "test__Math" : "mocha -w test/test__Math**.js --harmony --recursive --reporter list",
+    "test__Number" : "mocha -w test/test__Number**.js --harmony --recursive --reporter list",
     "test__Object" : "mocha -w test/test__Object**.js --harmony --recursive --reporter list",
     "test__Promise" : "mocha -w test/test__Promise**.js --harmony --recursive --reporter list",
     "test__String" : "mocha -w test/test__String**.js --harmony --recursive --reporter list"
