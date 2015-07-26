@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-// Number.Number.parseFloat(value)
+// Number.parseFloat(value)
 // The Number.parseFloat() method parses a string argument and returns a floating point number.
 // This method behaves identically to the global function parseFloat() and is part of ECMAScript 6
 // (its purpose is modularization of globals).
