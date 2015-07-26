@@ -1,5 +1,9 @@
-#ES6 + mocha.js + chai.js + sinon.js
-This project is a playground for ES6, [mocha.js](https://github.com/mochajs/mocha), [chai.js](https://github.com/chaijs/chai) and [sinon.js](https://github.com/cjohansen/Sinon.JS)
+#Javascript + ES6 + mocha.js + chai.js + sinon.js
+This is a project for testing Javascript + ES6, with [mocha.js](https://github.com/mochajs/mocha), [chai.js](https://github.com/chaijs/chai) and [sinon.js](https://github.com/cjohansen/Sinon.JS)
+
+Many of the examples and much of the wording in the tests come from [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/)
+
+This project is primarily a learning tool, however it could be used for testing whether certain features exist within a particular environment.
 
 Useful links:
 * [ES6 features](https://github.com/lukehoban/es6features)
@@ -75,6 +79,14 @@ mocha -w test/test__Array.js --harmony --recursive --reporter list
 ```
 
 ##TO DO
+* go back through and clean up tests, add all conditions for return values in descriptions (exclude String)
 * add shim support
 * setup for browser (Karma)
+
+* benchmarks
+String.prototype.localeCompare()
+Performance
+When comparing large numbers of strings, such as in sorting large arrays, it is better to create an Intl.Collator object and use the function provided by its compare property.
+
+
 
