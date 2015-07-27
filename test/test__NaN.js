@@ -7,7 +7,7 @@ var expect = require('chai').expect;
 // It is the returned value when Math functions fail (Math.sqrt(-1)) or
 // when a function trying to parse a number fails (parseInt("blabla")).
 
-describe('#NaN', function(){
+describe('NaN', function(){
 	it('represents Not-A-Number. Equivalent of NaN', function(){
 		expect( NaN ).to.be.NaN;
 	});
