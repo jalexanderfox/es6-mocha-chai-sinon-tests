@@ -79,7 +79,34 @@ mocha -w test/test__Array.js --harmony --recursive --reporter list
 ```
 
 ##TO DO
-* go back through and clean up tests, add all conditions for return values in descriptions (exclude String)
+* go back through and clean up tests, add all conditions for return values in descriptions (Array, Object)
+* Built-In objects
+	* Date
+	* Intl
+	* Math
+	* RegExp
+	* Intl
+	* JSON
+	* GeneratorFunction
+	* ArrayBuffer
+	* DataView
+	* Reflect
+	* Proxy
+	* Map
+	* Set
+	* WeakMap
+	* WeakSet
+	* SIMD
+	* Int8Array
+	* Uint8Array
+	* Uint8ClampedArray
+	* Int16Array
+	* Uint16Array
+	* Int32Array
+	* Uint32Array
+	* Float32Array
+	* Float64Array
+
 * add shim support
 * setup for browser (Karma)
 
