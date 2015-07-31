@@ -26,7 +26,7 @@ npm install
 
 To run the tests and watch for changes in the 'test' directory:
 ```bash
-mocha -w test/**/**.js --harmony --recursive --reporter list
+mocha -w test/**/**.js
 ```
 
 OR
@@ -37,9 +37,15 @@ npm test
 ```
 
 ####NOTE:
+Wondering where the flags are for the mocha command? check the following file:
+```bash
+mocha.opts
+```
+
+####NOTE:
 by default, the tests are run with polyfills if available, to turn off polyfills run your tests like this:
 ```bash
-NOPOLYFILLS=true mocha -w test/**/**.js --harmony --recursive --reporter list
+NOPOLYFILLS=true mocha -w test/**/**.js
 ```
 
 To run node REPL with full ES6 features:
@@ -53,13 +59,14 @@ There are a few ways to run object specific tests.
 The package.json has tests configured for several bultin objects which includes their subsequent methods/properties.
 ```json
   "scripts": {
-    "test": "mocha -w --harmony --recursive --reporter list",
-    "test__Array" : "mocha -w test/test__Array**.js --harmony --recursive --reporter list",
-    "test__Function" : "mocha -w test/test__Function**.js --harmony --recursive --reporter list",
-    "test__Math" : "mocha -w test/test__Math**.js --harmony --recursive --reporter list",
-    "test__Object" : "mocha -w test/test__Object**.js --harmony --recursive --reporter list",
-    "test__Promise" : "mocha -w test/test__Promise**.js --harmony --recursive --reporter list",
-    "test__String" : "mocha -w test/test__String**.js --harmony --recursive --reporter list"
+    "test": "mocha -w --harmony",
+    "test__Array" : "mocha -w test/test__Array**.js --harmony",
+    "test__Function" : "mocha -w test/test__Function**.js --harmony",
+    "test__Math" : "mocha -w test/test__Math**.js --harmony",
+    "test__Number" : "mocha -w test/test__Number**.js --harmony",
+    "test__Object" : "mocha -w test/test__Object**.js --harmony",
+    "test__Promise" : "mocha -w test/test__Promise**.js --harmony",
+    "test__String" : "mocha -w test/test__String**.js --harmony"
   },
 ```
 
@@ -70,12 +77,12 @@ npm run-script test__Array
 
 OR, of course you can just run the mocha script itself:
 ```bash
-mocha -w test/test__Array**.js --harmony --recursive --reporter list
+mocha -w test/test__Array**.js
 ```
 
 ###Run file specific tests
 ```bash
-mocha -w test/test__Array.js --harmony --recursive --reporter list
+mocha -w test/test__Array.js
 ```
 
 ##TO DO
