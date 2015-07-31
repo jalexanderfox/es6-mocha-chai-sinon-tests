@@ -34,7 +34,8 @@ describe('eval', function(){
 	it('returns the argument unchanged if the argument is not a string', function(){
 		var objObject = {};
 		expect( eval( objObject ) ).to.equal( objObject );
-		expect( eval( new String('1 + 1') ) ).to.eql(  { '0': '1', '1': ' ', '2': '+', '3': ' ', '4': '1' } );
+		expect( eval( new String('1 + 1') ) ).to.eql( new String('1 + 1') );
+		expect( eval('1 + 1') ).to.equal( 2 );
 	});
 
 	it('returns the value of the last expression evaluated', function(){
