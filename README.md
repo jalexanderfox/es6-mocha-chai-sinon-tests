@@ -41,11 +41,12 @@ Wondering where the flags are for the mocha command? check the following file:
 ```bash
 mocha.opts
 ```
+Wondering why I didn't put the _--harmony_ flag in the mocha.opts? It is because it doesn't work that way.
 
 ####NOTE:
 by default, the tests are run with polyfills if available, to turn off polyfills run your tests like this:
 ```bash
-NOPOLYFILLS=true mocha -w test/**/**.js
+NOPOLYFILLS=true mocha -w test/**/**.js --harmony
 ```
 
 To run node REPL with full ES6 features:
