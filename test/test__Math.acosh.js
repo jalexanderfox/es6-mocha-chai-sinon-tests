@@ -17,7 +17,7 @@ require('../polyfills/polyfills').getPolyfill('Math.acosh');
 
 describe('Math', function(){
 	describe('#acosh', function(){
-		it('function returns the hyperbolic arc-cosine of a number', function(){
+		it('returns the hyperbolic arc-cosine of a number', function(){
 			expect( Math.acosh(1) ).to.equal( 0 );
 			expect( Math.acosh(2) ).to.equal( 1.3169578969248166 );
 		});

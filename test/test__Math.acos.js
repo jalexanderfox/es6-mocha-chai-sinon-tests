@@ -14,7 +14,7 @@ var expect = require('chai').expect;
 
 describe('Math', function(){
 	describe('#acos', function(){
-		it('function returns the arccosine (in radians) of a number', function(){
+		it('returns the arccosine (in radians) of a number', function(){
 			expect( Math.acos(-1) ).to.equal( 3.141592653589793 );
 			expect( Math.acos(0) ).to.equal( 1.5707963267948966 );
 			expect( Math.acos(0.5) ).to.equal( 1.0471975511965976 );
