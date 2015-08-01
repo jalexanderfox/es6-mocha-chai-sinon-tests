@@ -14,7 +14,7 @@ require('../polyfills/polyfills').getPolyfill('Math.asinh');
 
 describe('Math', function(){
 	describe('#asinh', function(){
-		it('eturns the hyperbolic arcsine of a number', function(){
+		it('returns the hyperbolic arcsine of a number', function(){
 			expect( Math.asinh(1) ).to.equal( 0.8813735870195429 );
 			expect( Math.asinh(0) ).to.equal( 0 );
 			expect( Math.asinh(0.5) ).to.equal( 0.48121182505960347 );
