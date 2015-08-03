@@ -1,20 +1,17 @@
 var expect = require('chai').expect;
 
-// Math.ceil()
+// Math.floor(x)
+// The Math.floor() function returns the largest integer less than or equal to a given number.
 
-// The Math.ceil() function returns the smallest integer greater than or equal to a given number.
 
-
-// Because ceil() is a static method of Math, you always use it as Math.ceil(), rather than as a method of
-// a Math object you created (Math is not a constructor).
+// Because floor is a static property of Math, you always use it as Math.floor,
+// rather than as a property of a Math object you created (Math is not a constructor).
 
 describe('Math', function(){
-	describe('#ceil', function(){
-		it('returns the smallest integer greater than or equal to a given number', function(){
-			expect( Math.ceil(.95) ).to.equal( 1 );
-			expect( Math.ceil(4) ).to.equal( 4 );
-			expect( Math.ceil(7.004) ).to.equal( 8 );
-			expect( Math.ceil(-3.22) ).to.equal( -3 );
+	describe('#floor', function(){
+		it('returns the largest integer less than or equal to a given number', function(){
+			expect( Math.floor( 45.95) ).to.equal(  45 );
+			expect( Math.floor(-45.95) ).to.equal( -46 );
 		});
 
 		describe('use:', function(){
