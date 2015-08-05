@@ -86,6 +86,12 @@ mocha -w test/test__Array**.js
 mocha -w test/test__Array.js
 ```
 
+##Running Benchmarks
+To run a benchmark found in the _benchmark_ directory, use node to execute the file:
+```bash
+node benchmark/benchmark__string_search.js
+```
+
 ##TO DO
 * go back through and clean up tests, add all conditions for return values in descriptions (Array, Object)
 * Built-In objects
