@@ -97,7 +97,6 @@ node benchmark/benchmark__string_search.js
 * Built-In objects
 	* Date
 	* Intl
-	* Math
 	* RegExp
 	* Intl
 	* JSON
