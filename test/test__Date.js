@@ -125,14 +125,35 @@ describe('Date', function(){
 	describe('parameters', function(){
 		describe('value', function(){
 			it('integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).', function(){
+				expect( new Date(1000).getTime() ).to.equal( 1000 );
+			});
+		});
 
+		describe('year', function(){
+			it('integer value representing the year, beginning with -271820 to 275760.', function(){
+				expect( new Date(-271821, 3, 20).getFullYear() ).to.equal( -271821 );
+				expect( new Date(275760, 8, 12).getFullYear() ).to.equal( 275760 );
+			});
+
+			it('two diget years 0 - 99 map to 1900 - 1999', function(){
+				expect( new Date(99, 0).getFullYear() ).to.equal( 1999 );
+				expect( new Date(0, 0).getFullYear() ).to.equal( 1900 );
+			});
+
+			it('to create a date with years 0 - 99, use Date.prototype.setFullYear()', function(){
+				var date99;	(date99 = new Date(99,0)).setFullYear(99);
+				// or
+				// var date99 = new Date(99, 0);
+				// date99.setFullYear(99);
+				expect( date99.getFullYear() ).to.equal( 99 );
 			});
 		});
 
 		describe('month', function(){
-			it('integer value representing the month, beginning with 0 for January to 11 for December.')
-			expect( new Date(2015, 0).getMonth() ).to.equal( 0 );
-			expect( new Date(2015, 12).getMonth() ).to.equal( 0 );
+			it('integer value representing the month, beginning with 0 for January to 11 for December.', function(){
+				expect( new Date(2015, 0).getMonth() ).to.equal( 0 );
+				expect( new Date(2015, 12).getMonth() ).to.equal( 0 );
+			});
 		});
 
 		describe('day', function(){
