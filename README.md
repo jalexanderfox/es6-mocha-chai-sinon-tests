@@ -24,6 +24,8 @@ run:
 npm install
 ```
 
+
+##Testing
 To run the tests and watch for changes in the 'test' directory:
 ```bash
 mocha -w test/**/**.js
@@ -36,30 +38,6 @@ This does the same as above:
 npm test
 ```
 
-####mocha.opts
-Wondering where the flags are for the mocha command? check the following file:
-```bash
-mocha.opts
-```
-Wondering why the _--harmony_ flag is not in mocha.opts? It is because it doesn't work that way.
-
-####Polyfills
-by default, the tests are run with polyfills if available, to turn off polyfills run your tests like this:
-```bash
-NOPOLYFILLS=true mocha -w test/**/**.js --harmony
-```
-
-####Timezones
-by default, the timezone is based on system local time, however you can modify the timezone for the process to test other timezones
-```bash
-TZ='Europe/Amsterdam' mocha -w test/**/**.js --harmony
-```
-
-####node REPL ES6
-To run node REPL with full ES6 features:
-```bash
-node --harmony
-```
 
 ###Run Object specific tests
 There are a few ways to run object specific tests.
@@ -85,19 +63,47 @@ npm run-script test__Array
 
 OR, of course you can just run the mocha script itself:
 ```bash
-mocha -w test/test__Array**.js
+mocha -w test/test__Array**.js --harmony
 ```
 
 ###Run file specific tests
 ```bash
-mocha -w test/test__Array.js
+mocha -w test/test__Array.js --harmony
 ```
 
-##Running Benchmarks
+##Options
+
+###mocha.opts
+Wondering where the flags are for the mocha command? check the following file:
+```bash
+mocha.opts
+```
+Wondering why the _--harmony_ flag is not in mocha.opts? It is because it doesn't work that way.
+
+###Polyfills
+by default, the tests are run with polyfills if available, to turn off polyfills run your tests like this:
+```bash
+NOPOLYFILLS=true mocha -w test/**/**.js --harmony
+```
+
+###Timezones
+by default, the timezone is based on system local time, however you can modify the timezone for the process to test other timezones
+```bash
+TZ='Europe/Amsterdam' mocha -w test/**/**.js --harmony
+```
+
+##Benchmarks
 To run a benchmark found in the _benchmark_ directory, use node to execute the file:
 ```bash
 node benchmark/benchmark__string_search.js
 ```
+
+##node REPL ES6
+To run node REPL with “full” ES6 features*:
+```bash
+node --harmony
+```
+_*includes all ES6 features available in your version of node, not necessarily all ES6 features that have been drafted._
 
 ##TO DO
 * go back through and clean up tests, add all conditions for return values in descriptions (Array, Object)
