@@ -36,19 +36,26 @@ This does the same as above:
 npm test
 ```
 
-####NOTE:
+####mocha.opts
 Wondering where the flags are for the mocha command? check the following file:
 ```bash
 mocha.opts
 ```
-Wondering why I didn't put the _--harmony_ flag in the mocha.opts? It is because it doesn't work that way.
+Wondering why the _--harmony_ flag is not in mocha.opts? It is because it doesn't work that way.
 
-####NOTE:
+####Polyfills
 by default, the tests are run with polyfills if available, to turn off polyfills run your tests like this:
 ```bash
 NOPOLYFILLS=true mocha -w test/**/**.js --harmony
 ```
 
+####Timezones
+by default, the timezone is based on system local time, however you can modify the timezone for the process to test other timezones
+```bash
+TZ='Europe/Amsterdam' mocha -w test/**/**.js --harmony
+```
+
+####node REPL ES6
 To run node REPL with full ES6 features:
 ```bash
 node --harmony
