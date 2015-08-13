@@ -5,6 +5,11 @@ var expect = require('chai').expect;
 // Date objects are based on a time value that is the number of milliseconds
 // since 1 January, 1970 UTC.
 
+// new Date();
+// new Date(value);
+// new Date(dateString);
+// new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
+
 // Parameters
 
 // Note: Where Date is called as a constructor with more than one argument,
@@ -129,9 +134,15 @@ describe('Date', function(){
 			});
 		});
 
+		describe('dateString', function(){
+			it('String value representing a date. The string should be in a format recognized by the Date.parse() method (IETF-compliant RFC 2822 timestamps and also a version of ISO8601).', function(){
+				expect( new Date('January 1, 1970 00:00:00 UTC').getTime() ).to.equal( 0 );
+			});
+		});
+
 		describe('year', function(){
 			it('integer value representing the year, beginning with -271820 to 275760.', function(){
-				expect( new Date(-271821, 3, 20).getFullYear() ).to.equal( -271821 );
+				expect( new Date(-271821, 3, 21).getFullYear() ).to.equal( -271821 );
 				expect( new Date(275760, 8, 12).getFullYear() ).to.equal( 275760 );
 			});
 
