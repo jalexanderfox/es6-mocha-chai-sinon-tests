@@ -12,9 +12,9 @@ describe('Date', function(){
 	describe('#prototype', function(){
 		describe('#setMilliseconds', function(){
 			var theBigDay = new Date(1962, 6, 7); // 1962-07-07
-			it.skip('returns a new timestamp value for the current object.', function(){
+			it('returns a new timestamp value for the current object.', function(){
 				// returns local timestamp, not UTC
-				expect( theBigDay.setMilliseconds(80) ).to.equal( -236289599920 );
+				expect( theBigDay.setMilliseconds(80) ).to.equal( theBigDay.getTime() );
 			});
 
 			it('attempts to update the date information in the Date object even if a parameter is out of its expected range', function(){

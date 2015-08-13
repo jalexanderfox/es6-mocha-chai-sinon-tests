@@ -24,9 +24,9 @@ describe('Date', function(){
 	describe('#prototype', function(){
 		describe('#setHours', function(){
 			var theBigDay = new Date(1962, 6, 7); // 1962-07-07
-			it.skip('returns a new timestamp value for the current object.', function(){
+			it('returns a new timestamp value for the current object.', function(){
 				// the timestamp is local time, not UTC
-				expect( theBigDay.setHours(10) ).to.equal( -236253600000 );
+				expect( theBigDay.setHours(10) ).to.equal( theBigDay.getTime() );
 			});
 
 			it('The values returned from the getMinutes(), getSeconds(), and getMilliseconds() methods are used if the minutesValue, secondsValue, and msValue parameters are not specified.', function(){

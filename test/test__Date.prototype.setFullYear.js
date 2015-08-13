@@ -6,9 +6,9 @@ describe('Date', function(){
 	describe('#prototype', function(){
 		describe('#setFullYear', function(){
 			var theBigDay = new Date(1962, 6, 7); // 1962-07-07
-			it.skip('returns a new timestamp value for the current object.', function(){
+			it('returns a new timestamp value for the current object.', function(){
 				// the timestamp returned is local time and not universal
-				expect( theBigDay.setFullYear(1999) ).to.equal( 931320000000 );
+				expect( theBigDay.setFullYear(1999) ).to.equal( theBigDay.getTime() );
 			});
 
 			it('uses the values returned from getMonth() and getDate() methods if you do not specify the monthValue and dayValue parameters.', function(){
