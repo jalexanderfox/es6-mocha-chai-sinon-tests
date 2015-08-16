@@ -3,6 +3,13 @@ var expect = require('chai').expect;
 //str.slice(beginSlice[, endSlice])
 //
 //The slice() method extracts a section of a string and returns a new string.
+//
+// If start equals stop, it returns an empty string, exactly like substring().
+// If stop is omitted, slice extracts chars to the end of the string, exactly like substring().
+// If start > stop, slice() will NOT swap the 2 arguments.
+// If either argument is greater than the string's length, either argument will use the string's length, exactly like substring().
+// If start is negative, slice() will set char from the end of string, exactly like substr() in Firefox. This behavior is observed in both Firefox and IE.
+// If stop is negative, slice() will set stop to: (string.length – 1) – Math.abs(stop) (original value).
 describe('String', function() {
 	describe('#prototype', function(){
 		describe('#slice', function(){

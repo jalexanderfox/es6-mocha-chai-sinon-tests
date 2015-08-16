@@ -2,6 +2,12 @@ var expect = require('chai').expect;
 
 //str.substring(indexA[, indexB])
 //The substring() method returns a subset of a string between one index and another, or through the end of the string.
+//If start equals stop, it returns an empty string.
+// If stop is omitted, it extracts characters to the end of the string.
+// If start > stop, then substring will swap those 2 arguments.
+// If either argument is greater than the string's length, either argument will use the string's length.
+// If either argument is less than 0 or is NaN, it is treated as if it were 0.
+
 describe('String', function() {
 	describe('#prototype', function(){
 		describe('#substring', function(){
