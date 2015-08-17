@@ -4,12 +4,6 @@ var expect = require('chai').expect;
 //
 //The slice() method extracts a section of a string and returns a new string.
 //
-// If start equals stop, it returns an empty string, exactly like substring().
-// If stop is omitted, slice extracts chars to the end of the string, exactly like substring().
-// If start > stop, slice() will NOT swap the 2 arguments.
-// If either argument is greater than the string's length, either argument will use the string's length, exactly like substring().
-// If start is negative, slice() will set char from the end of string, exactly like substr() in Firefox. This behavior is observed in both Firefox and IE.
-// If stop is negative, slice() will set stop to: (string.length – 1) – Math.abs(stop) (original value).
 describe('String', function() {
 	describe('#prototype', function(){
 		describe('#slice', function(){
@@ -23,6 +17,15 @@ describe('String', function() {
 			it('with no parameters defaults to beginSlice = 0', function() {
 				expect( '0123456789'.slice() ).to.equal( '0123456789'.slice(0) );
 			});
+
+			it('returns empty string if beginSlice === endSlice', function() {
+				expect( '0123456789'.slice(0, 0) ).to.equal( '' );
+			});
+
+			it('returns empty string if beginSlice > endSlice', function(){
+				expect( '0123456789'.slice(1,0) ).to.equal( '' );
+			});
+
 
 			it('can extract a string beginning at an index to the end of a string', function(){
 				expect( '0123456789'.slice() ).to.equal( '0123456789' );
@@ -57,7 +60,11 @@ describe('String', function() {
 				expect( '0123456789'.slice(20) ).to.equal( '' );
 			});
 
-			it('If beginSlice parameter is negative, it is treated as sourceLength + beginSlice where sourceLength is the length of the string (for example, if endSlice is -3 it is treated as sourceLength - 3).', function(){
+			it('will use the string.length if the endSlice is greater than string.length', function(){
+				expect( '0123456789'.slice(0, 20) ).to.equal( '0123456789' );
+			});
+
+			it('beginSlice is treated as sourceLength + beginSlice where sourceLength is the length of the string, if beginSlice parameter is negative (for example, if endSlice is -3 it is treated as sourceLength - 3).', function(){
 				expect( '0123456789'.slice(-1) ).to.equal('9');
 				expect( '0123456789'.slice(-2) ).to.equal('89');
 				expect( '0123456789'.slice(-3) ).to.equal('789');
@@ -70,7 +77,7 @@ describe('String', function() {
 				expect( '0123456789'.slice(-10) ).to.equal('0123456789');
 			});
 
-			it('If endSlice parameter is negative, it is treated as sourceLength + endSlice where sourceLength is the length of the string (for example, if endSlice is -3 it is treated as sourceLength - 3).', function(){
+			it('endSlice is treated as sourceLength + endSlice where sourceLength is the length of the string, if endSlice parameter is negative (for example, if endSlice is -3 it is treated as sourceLength - 3).', function(){
 				expect( '0123456789'.slice(0, -1) ).to.equal('012345678');
 				expect( '0123456789'.slice(0, -2) ).to.equal('01234567');
 				expect( '0123456789'.slice(0, -3) ).to.equal('0123456');
