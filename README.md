@@ -108,7 +108,6 @@ _*includes all ES6 features available in your version of node, not necessarily a
 ##TO DO
 * go back through and clean up tests, add all conditions for return values in descriptions (Array, Object)
 * Built-In objects
-	* Date
 	* Intl
 	* RegExp
 	* Intl
